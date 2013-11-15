@@ -1,0 +1,58 @@
+﻿@model ProductSite.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Product</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        $@Html.DisplayFor(model => model.Price)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.DisplayItem)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.DisplayItem)
+        @Html.ValidationMessageFor(model => model.DisplayItem)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(m=>m.Image)
+    </div>
+
+    <input name="Image" type="file"/>
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
