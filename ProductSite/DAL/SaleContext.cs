@@ -8,7 +8,7 @@ namespace ProductSite.DAL
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Sale> Sales { get; set; }
+        public DbSet<SalesDetail> SalesDetails { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

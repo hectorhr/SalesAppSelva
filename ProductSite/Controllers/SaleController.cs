@@ -19,7 +19,7 @@ namespace ProductSite.Controllers
 
         public ActionResult Index()
         {
-            var sales = db.Sales.Include(s => s.Product).Include(s => s.Customer);
+            var sales = db.SalesDetails.Include(s => s.Product).Include(s => s.Customer);
             return View(sales.ToList());
         }
 
@@ -28,7 +28,7 @@ namespace ProductSite.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Sale sale = db.Sales.Find(id);
+            SalesDetail sale = db.SalesDetails.Find(id);
             if (sale == null)
             {
                 return HttpNotFound();
@@ -51,11 +51,11 @@ namespace ProductSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Sale sale)
+        public ActionResult Create(SalesDetail sale)
         {
             if (ModelState.IsValid)
             {
-                db.Sales.Add(sale);
+                db.SalesDetails.Add(sale);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -70,7 +70,7 @@ namespace ProductSite.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Sale sale = db.Sales.Find(id);
+            SalesDetail sale = db.SalesDetails.Find(id);
             if (sale == null)
             {
                 return HttpNotFound();
@@ -85,7 +85,7 @@ namespace ProductSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Sale sale)
+        public ActionResult Edit(SalesSummary sale)
         {
             if (ModelState.IsValid)
             {
@@ -103,7 +103,7 @@ namespace ProductSite.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Sale sale = db.Sales.Find(id);
+            SalesDetail sale = db.SalesDetails.Find(id);
             if (sale == null)
             {
                 return HttpNotFound();
@@ -118,8 +118,8 @@ namespace ProductSite.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Sale sale = db.Sales.Find(id);
-            db.Sales.Remove(sale);
+            SalesDetail sale = db.SalesDetails.Find(id);
+            db.SalesDetails.Remove(sale);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -85,5 +85,4 @@ C:\Users\Admin\Project\AccountingTaxService\ProductSite\ProductSite\obj\Debug\Pr
 C:\Users\Admin\Project\AccountingTaxService\ProductSite\ProductSite\obj\Debug\ProductSite.Migrations.InitialCreate.resources
 C:\Users\Admin\Project\AccountingTaxService\ProductSite\ProductSite\obj\Debug\ProductSite.csproj.GenerateResource.Cache
 C:\Users\Admin\Project\AccountingTaxService\ProductSite\ProductSite\obj\Debug\ProductSite.Migrations.InitialCreate1.resources
-C:\Users\Admin\Project\AccountingTaxService\ProductSite\ProductSite\obj\Debug\ProductSite.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Project\AccountingTaxService\ProductSite\ProductSite\obj\Debug\ProductSite.Migrations.InitialCreate2.resources

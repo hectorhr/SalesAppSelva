@@ -25,5 +25,7 @@ namespace ProductSite.Models
         public virtual Customer Customer { get; set; }
         public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<Employee> Employees { get; set; }
+
+        public object ProductID { get; set; }
     }
 }

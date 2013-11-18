@@ -16,7 +16,7 @@ namespace ProductSite.Models
         
         [Column(TypeName = "Money")]
         public decimal Price { get; set; }
-        public virtual ICollection<Sale> Sales { get; set; }
+        public virtual ICollection<SalesSummary> Sales { get; set; }
         
         [Column(TypeName = "image")]
         public byte[] Image { get; set; }

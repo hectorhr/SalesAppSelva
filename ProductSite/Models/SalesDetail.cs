@@ -21,5 +21,11 @@ namespace ProductSite.Models
 
         public virtual ICollection<Product> Products { get; set; }
         public virtual SalesSummary SalesSummary { get; set; }
+
+        public object CustomerID { get; set; }
+
+        public Product Product { get; set; }
+
+        public Customer Customer { get; set; }
     }
 }
